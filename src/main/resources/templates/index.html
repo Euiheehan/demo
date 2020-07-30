@@ -1,10 +1,40 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>euihee Test</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-<p>Test :  <a href="/test">click</a></p>
+
+<a href="/upload">사진올리기</a></p>
+
+<table>
+    <thead>
+    <tr>
+        <th class="one wide">no</th>
+        <th class="ten wide">사진 이름</th>
+        <th class="two wide">사진</th>
+        <th class="three wide">등록일</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="image : ${imageList}">
+        <td>
+            <span th:text="${image.id}"></span>
+        </td>
+        <td>
+            <span th:text="${image.name}"></span>
+        </td>
+        <td>
+            <img th:src="${image.url}"/>
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
