@@ -8,12 +8,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class PhotoRepositoryTest {
-    @Autowired
-    private PhotoRepository photoRepository;
 
     @Test
     public void test(){
-        assertEquals(photoRepository.getPhoto(), 2);
     }
 
 }
